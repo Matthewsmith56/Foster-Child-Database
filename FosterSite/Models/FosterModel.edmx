@@ -12,11 +12,11 @@
           <Property Name="Family ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Foster Family Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Type of Home" Type="nvarchar" MaxLength="50" />
-          <Property Name="Licensed Beds" Type="int" />
-          <Property Name="Occupied Beds" Type="int" />
-          <Property Name="Available Beds" Type="int" />
-          <Property Name="Min Age" Type="int" />
-          <Property Name="Max Age" Type="int" />
+          <Property Name="Licensed Beds" Type="int" Nullable="false" />
+          <Property Name="Occupied Beds" Type="int" Nullable="false" />
+          <Property Name="Available Beds" Type="int" Nullable="false" />
+          <Property Name="Min Age" Type="int" Nullable="false" />
+          <Property Name="Max Age" Type="int" Nullable="false" />
           <Property Name="Gender Preferance" Type="nvarchar" MaxLength="20" />
           <Property Name="Managing Agency" Type="nvarchar" MaxLength="20" />
           <Property Name="Point of Contact" Type="nvarchar" MaxLength="20" />
@@ -39,11 +39,11 @@
           <Property Name="Family_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Foster_Family_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Type_of_Home" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Licensed_Beds" Type="Int32" />
-          <Property Name="Occupied_Beds" Type="Int32" />
-          <Property Name="Available_Beds" Type="Int32" />
-          <Property Name="Min_Age" Type="Int32" />
-          <Property Name="Max_Age" Type="Int32" />
+          <Property Name="Licensed_Beds" Type="Int32" Nullable="false" />
+          <Property Name="Occupied_Beds" Type="Int32" Nullable="false" />
+          <Property Name="Available_Beds" Type="Int32" Nullable="false" />
+          <Property Name="Min_Age" Type="Int32" Nullable="false" />
+          <Property Name="Max_Age" Type="Int32" Nullable="false" />
           <Property Name="Gender_Preferance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Managing_Agency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Point_of_Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
