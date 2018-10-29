@@ -46,7 +46,7 @@ namespace FosterSite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Family_ID,Foster_Family_Name,Type_of_Home,Number_of_Licensed_Beds,Number_of_Occupied_Beds,Number_of_Available_Beds,Minimum_Age,Maximum_Age,Gender_Preferance,Managing_Agency,Point_of_Contact,Comments")] FosterTable fosterTable)
+        public ActionResult Create([Bind(Include = "Family_ID,Foster_Family_Name,Type_of_Home,Licensed_Beds,Occupied_Beds,Available_Beds,Min_Age,Max_Age,Gender_Preferance,Managing_Agency,Point_of_Contact,Comments")] FosterTable fosterTable)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace FosterSite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Family_ID,Foster_Family_Name,Type_of_Home,Number_of_Licensed_Beds,Number_of_Occupied_Beds,Number_of_Available_Beds,Minimum_Age,Maximum_Age,Gender_Preferance,Managing_Agency,Point_of_Contact,Comments")] FosterTable fosterTable)
+        public ActionResult Edit([Bind(Include = "Family_ID,Foster_Family_Name,Type_of_Home,Licensed_Beds,Occupied_Beds,Available_Beds,Min_Age,Max_Age,Gender_Preferance,Managing_Agency,Point_of_Contact,Comments")] FosterTable fosterTable)
         {
             if (ModelState.IsValid)
             {

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="58415e2e-71fa-4118-88f4-b36af3943b5b" ChangeDateTime="10/29/2018 13:25:55">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[Number of Licensed Beds]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Licensed Beds" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9e97521a-34d3-4310-a4c1-4a8f5be76bb7" ChangeDateTime="10/29/2018 13:45:37">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[Min Age]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Min_Age" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6f868bf2-6aa4-418b-bf9a-9f28283c3ffb" ChangeDateTime="10/29/2018 13:45:39">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[Max Age]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Max_Age" />
+  </Operation>
+</Operations>

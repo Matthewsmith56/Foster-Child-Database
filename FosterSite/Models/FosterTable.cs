@@ -17,11 +17,11 @@ namespace FosterSite.Models
         public int Family_ID { get; set; }
         public string Foster_Family_Name { get; set; }
         public string Type_of_Home { get; set; }
-        public Nullable<int> Number_of_Licensed_Beds { get; set; }
-        public Nullable<int> Number_of_Occupied_Beds { get; set; }
-        public Nullable<int> Number_of_Available_Beds { get; set; }
-        public Nullable<int> Minimum_Age { get; set; }
-        public Nullable<int> Maximum_Age { get; set; }
+        public Nullable<int> Licensed_Beds { get; set; }
+        public Nullable<int> Occupied_Beds { get; set; }
+        public Nullable<int> Available_Beds { get; set; }
+        public Nullable<int> Min_Age { get; set; }
+        public Nullable<int> Max_Age { get; set; }
         public string Gender_Preferance { get; set; }
         public string Managing_Agency { get; set; }
         public string Point_of_Contact { get; set; }
