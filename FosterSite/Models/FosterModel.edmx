@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FosterDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FosterTable">
+          <Key>
+            <PropertyRef Name="Family ID" />
+          </Key>
+          <Property Name="Family ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Foster Family Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type of Home" Type="nvarchar" MaxLength="50" />
+          <Property Name="Number of Licensed Beds" Type="int" />
+          <Property Name="Number of Occupied Beds" Type="int" />
+          <Property Name="Number of Available Beds" Type="int" />
+          <Property Name="Minimum Age" Type="int" />
+          <Property Name="Maximum Age" Type="int" />
+          <Property Name="Gender Preferance" Type="nvarchar" MaxLength="20" />
+          <Property Name="Managing Agency" Type="nvarchar" MaxLength="20" />
+          <Property Name="Point of Contact" Type="nvarchar" MaxLength="20" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="FosterDataModelStoreContainer">
+          <EntitySet Name="FosterTable" EntityType="Self.FosterTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FosterDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FosterTable">
+          <Key>
+            <PropertyRef Name="Family_ID" />
+          </Key>
+          <Property Name="Family_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Foster_Family_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type_of_Home" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Number_of_Licensed_Beds" Type="Int32" />
+          <Property Name="Number_of_Occupied_Beds" Type="Int32" />
+          <Property Name="Number_of_Available_Beds" Type="Int32" />
+          <Property Name="Minimum_Age" Type="Int32" />
+          <Property Name="Maximum_Age" Type="Int32" />
+          <Property Name="Gender_Preferance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Managing_Agency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Point_of_Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="FosterDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FosterTables" EntityType="Self.FosterTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FosterDataModelStoreContainer" CdmEntityContainer="FosterDataEntities">
+          <EntitySetMapping Name="FosterTables">
+            <EntityTypeMapping TypeName="FosterDataModel.FosterTable">
+              <MappingFragment StoreEntitySet="FosterTable">
+                <ScalarProperty Name="Family_ID" ColumnName="Family ID" />
+                <ScalarProperty Name="Foster_Family_Name" ColumnName="Foster Family Name" />
+                <ScalarProperty Name="Type_of_Home" ColumnName="Type of Home" />
+                <ScalarProperty Name="Number_of_Licensed_Beds" ColumnName="Number of Licensed Beds" />
+                <ScalarProperty Name="Number_of_Occupied_Beds" ColumnName="Number of Occupied Beds" />
+                <ScalarProperty Name="Number_of_Available_Beds" ColumnName="Number of Available Beds" />
+                <ScalarProperty Name="Minimum_Age" ColumnName="Minimum Age" />
+                <ScalarProperty Name="Maximum_Age" ColumnName="Maximum Age" />
+                <ScalarProperty Name="Gender_Preferance" ColumnName="Gender Preferance" />
+                <ScalarProperty Name="Managing_Agency" ColumnName="Managing Agency" />
+                <ScalarProperty Name="Point_of_Contact" ColumnName="Point of Contact" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

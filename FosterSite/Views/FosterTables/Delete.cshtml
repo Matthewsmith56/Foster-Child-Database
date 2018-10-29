@@ -1,0 +1,112 @@
+﻿@model FosterSite.Models.FosterTable
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FosterTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Foster_Family_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Foster_Family_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type_of_Home)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type_of_Home)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_of_Licensed_Beds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_of_Licensed_Beds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_of_Occupied_Beds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_of_Occupied_Beds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_of_Available_Beds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_of_Available_Beds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Minimum_Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Minimum_Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maximum_Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maximum_Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender_Preferance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender_Preferance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Managing_Agency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Managing_Agency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Point_of_Contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Point_of_Contact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

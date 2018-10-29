@@ -1,0 +1,93 @@
+﻿@model IEnumerable<FosterSite.Models.FosterTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Foster_Family_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type_of_Home)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number_of_Licensed_Beds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number_of_Occupied_Beds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number_of_Available_Beds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Minimum_Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maximum_Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender_Preferance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Managing_Agency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Point_of_Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Foster_Family_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type_of_Home)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number_of_Licensed_Beds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number_of_Occupied_Beds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number_of_Available_Beds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Minimum_Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maximum_Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender_Preferance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Managing_Agency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Point_of_Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Family_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Family_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Family_ID })
+        </td>
+    </tr>
+}
+
+</table>
