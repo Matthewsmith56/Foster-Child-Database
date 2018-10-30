@@ -25,7 +25,7 @@
           <Property Name="Max Age" Type="int" Nullable="false" />
           <Property Name="Preferred Gender" Type="nvarchar" MaxLength="20" />
           <Property Name="Agency" Type="nvarchar" MaxLength="20" />
-          <Property Name="P.O.C" Type="nvarchar" MaxLength="20" />
+          <Property Name="POC" Type="nvarchar" MaxLength="20" />
           <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityContainer Name="FosterDataModelStoreContainer">
@@ -60,7 +60,7 @@
           <Property Name="Max_Age" Type="Int32" Nullable="false" />
           <Property Name="Preferred_Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Agency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="P_O_C" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="POC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
@@ -80,7 +80,7 @@
             <EntityTypeMapping TypeName="FosterDataModel.FosterTable">
               <MappingFragment StoreEntitySet="FosterTable">
                 <ScalarProperty Name="Comments" ColumnName="Comments" />
-                <ScalarProperty Name="P_O_C" ColumnName="P.O.C" />
+                <ScalarProperty Name="POC" ColumnName="POC" />
                 <ScalarProperty Name="Agency" ColumnName="Agency" />
                 <ScalarProperty Name="Preferred_Gender" ColumnName="Preferred Gender" />
                 <ScalarProperty Name="Max_Age" ColumnName="Max Age" />

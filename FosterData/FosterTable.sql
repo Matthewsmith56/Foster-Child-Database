@@ -10,7 +10,7 @@
 	[Max Age]					INT						NOT NULL, CHECK ([Max Age]		  <= 18),
 	[Preferred Gender]			NVARCHAR	(20)		NULL,
 	[Agency]					NVARCHAR	(20)		NULL,
-	[P.O.C.]					NVARCHAR	(20)		NULL,
+	[POC]					NVARCHAR	(20)		NULL,
 	[Comments]					NVARCHAR	(100)		NULL,
 	PRIMARY KEY CLUSTERED ([Family ID] ASC)
 )

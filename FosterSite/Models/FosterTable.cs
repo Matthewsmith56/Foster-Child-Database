@@ -24,7 +24,7 @@ namespace FosterSite.Models
         public int Max_Age { get; set; }
         public string Preferred_Gender { get; set; }
         public string Agency { get; set; }
-        public string P_O_C { get; set; }
+        public string POC { get; set; }
         public string Comments { get; set; }
     }
 }

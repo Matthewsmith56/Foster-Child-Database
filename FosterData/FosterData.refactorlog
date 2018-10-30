@@ -49,4 +49,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Foster Family" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="cd41331f-eacb-4936-b569-6e6ff982c158" ChangeDateTime="10/30/2018 13:45:47">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[P.O.C.]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="POC" />
+  </Operation>
 </Operations>
