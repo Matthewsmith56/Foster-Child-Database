@@ -181,6 +181,7 @@
     <Compile Include="Models\FosterTable.cs">
       <DependentUpon>FosterModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TableValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
