@@ -5,24 +5,31 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="FosterDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
         <EntityType Name="FosterTable">
           <Key>
             <PropertyRef Name="Family ID" />
           </Key>
           <Property Name="Family ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Foster Family Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Foster Family" Type="nvarchar" MaxLength="50" />
           <Property Name="Type of Home" Type="nvarchar" MaxLength="50" />
           <Property Name="Licensed Beds" Type="int" Nullable="false" />
           <Property Name="Occupied Beds" Type="int" Nullable="false" />
           <Property Name="Available Beds" Type="int" Nullable="false" />
           <Property Name="Min Age" Type="int" Nullable="false" />
           <Property Name="Max Age" Type="int" Nullable="false" />
-          <Property Name="Gender Preferance" Type="nvarchar" MaxLength="20" />
-          <Property Name="Managing Agency" Type="nvarchar" MaxLength="20" />
-          <Property Name="Point of Contact" Type="nvarchar" MaxLength="20" />
+          <Property Name="Preferred Gender" Type="nvarchar" MaxLength="20" />
+          <Property Name="Agency" Type="nvarchar" MaxLength="20" />
+          <Property Name="P.O.C" Type="nvarchar" MaxLength="20" />
           <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityContainer Name="FosterDataModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FosterTable" EntityType="Self.FosterTable" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -30,23 +37,30 @@
     <edmx:ConceptualModels>
       <Schema Namespace="FosterDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="FosterDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__RefactorLog" EntityType="FosterDataModel.C__RefactorLog" />
           <EntitySet Name="FosterTables" EntityType="FosterDataModel.FosterTable" />
         </EntityContainer>
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
         <EntityType Name="FosterTable">
           <Key>
             <PropertyRef Name="Family_ID" />
           </Key>
           <Property Name="Family_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Foster_Family_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Foster_Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Type_of_Home" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Licensed_Beds" Type="Int32" Nullable="false" />
           <Property Name="Occupied_Beds" Type="Int32" Nullable="false" />
           <Property Name="Available_Beds" Type="Int32" Nullable="false" />
           <Property Name="Min_Age" Type="Int32" Nullable="false" />
           <Property Name="Max_Age" Type="Int32" Nullable="false" />
-          <Property Name="Gender_Preferance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Managing_Agency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Point_of_Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Preferred_Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Agency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="P_O_C" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
@@ -55,20 +69,27 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="FosterDataModelStoreContainer" CdmEntityContainer="FosterDataEntities">
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="FosterDataModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="FosterTables">
             <EntityTypeMapping TypeName="FosterDataModel.FosterTable">
               <MappingFragment StoreEntitySet="FosterTable">
                 <ScalarProperty Name="Comments" ColumnName="Comments" />
-                <ScalarProperty Name="Point_of_Contact" ColumnName="Point of Contact" />
-                <ScalarProperty Name="Managing_Agency" ColumnName="Managing Agency" />
-                <ScalarProperty Name="Gender_Preferance" ColumnName="Gender Preferance" />
+                <ScalarProperty Name="P_O_C" ColumnName="P.O.C" />
+                <ScalarProperty Name="Agency" ColumnName="Agency" />
+                <ScalarProperty Name="Preferred_Gender" ColumnName="Preferred Gender" />
                 <ScalarProperty Name="Max_Age" ColumnName="Max Age" />
                 <ScalarProperty Name="Min_Age" ColumnName="Min Age" />
                 <ScalarProperty Name="Available_Beds" ColumnName="Available Beds" />
                 <ScalarProperty Name="Occupied_Beds" ColumnName="Occupied Beds" />
                 <ScalarProperty Name="Licensed_Beds" ColumnName="Licensed Beds" />
                 <ScalarProperty Name="Type_of_Home" ColumnName="Type of Home" />
-                <ScalarProperty Name="Foster_Family_Name" ColumnName="Foster Family Name" />
+                <ScalarProperty Name="Foster_Family" ColumnName="Foster Family" />
                 <ScalarProperty Name="Family_ID" ColumnName="Family ID" />
               </MappingFragment>
             </EntityTypeMapping>

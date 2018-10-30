@@ -5,7 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e97a62c75f5f498db29d4ffabe345156" Name="Diagram1">
-        <EntityTypeShape EntityType="FosterDataModel.FosterTable" Width="2" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FosterDataModel.C__RefactorLog" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FosterDataModel.FosterTable" Width="2.125" PointX="2.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

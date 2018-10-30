@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Foster_Family_Name)
+            @Html.DisplayNameFor(model => model.Foster_Family)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Type_of_Home)
@@ -33,13 +33,13 @@
             @Html.DisplayNameFor(model => model.Max_Age)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Gender_Preferance)
+            @Html.DisplayNameFor(model => model.Preferred_Gender)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Managing_Agency)
+            @Html.DisplayNameFor(model => model.Agency)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Point_of_Contact)
+            @Html.DisplayNameFor(model => model.P_O_C)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Comments)
@@ -50,7 +50,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Foster_Family_Name)
+            @Html.DisplayFor(modelItem => item.Foster_Family)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Type_of_Home)
@@ -71,13 +71,13 @@
             @Html.DisplayFor(modelItem => item.Max_Age)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Gender_Preferance)
+            @Html.DisplayFor(modelItem => item.Preferred_Gender)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Managing_Agency)
+            @Html.DisplayFor(modelItem => item.Agency)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Point_of_Contact)
+            @Html.DisplayFor(modelItem => item.P_O_C)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Comments)

@@ -15,16 +15,16 @@ namespace FosterSite.Models
     public partial class FosterTable
     {
         public int Family_ID { get; set; }
-        public string Foster_Family_Name { get; set; }
+        public string Foster_Family { get; set; }
         public string Type_of_Home { get; set; }
         public int Licensed_Beds { get; set; }
         public int Occupied_Beds { get; set; }
         public int Available_Beds { get; set; }
         public int Min_Age { get; set; }
         public int Max_Age { get; set; }
-        public string Gender_Preferance { get; set; }
-        public string Managing_Agency { get; set; }
-        public string Point_of_Contact { get; set; }
+        public string Preferred_Gender { get; set; }
+        public string Agency { get; set; }
+        public string P_O_C { get; set; }
         public string Comments { get; set; }
     }
 }

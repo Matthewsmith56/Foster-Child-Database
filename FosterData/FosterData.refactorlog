@@ -21,4 +21,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Max_Age" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="fde982cc-0f70-4434-b454-c24cdc3a62db" ChangeDateTime="10/30/2018 13:15:06">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[Managing Agency]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Agency" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75ae7f5f-276a-4417-b277-4008795e9f85" ChangeDateTime="10/30/2018 13:15:17">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[Gender Preferance]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Preferred Gender" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="da997c0a-a7a5-4fcd-b0af-44d39c4d6430" ChangeDateTime="10/30/2018 13:15:24">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[Point of Contact]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="P.O.C." />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="07cf129b-c54b-4956-ade7-606cf7229288" ChangeDateTime="10/30/2018 13:17:48">
+    <Property Name="ElementName" Value="[dbo].[FosterTable].[Foster Family Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FosterTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Foster Family" />
+  </Operation>
 </Operations>
