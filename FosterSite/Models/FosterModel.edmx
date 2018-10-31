@@ -18,14 +18,14 @@
           <Property Name="Family ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Foster Family" Type="nvarchar" MaxLength="50" />
           <Property Name="Type of Home" Type="nvarchar" MaxLength="50" />
-          <Property Name="Licensed Beds" Type="int" Nullable="false" />
-          <Property Name="Occupied Beds" Type="int" Nullable="false" />
-          <Property Name="Available Beds" Type="int" Nullable="false" />
-          <Property Name="Min Age" Type="int" Nullable="false" />
-          <Property Name="Max Age" Type="int" Nullable="false" />
+          <Property Name="Licensed Beds" Type="int" />
+          <Property Name="Occupied Beds" Type="int" />
+          <Property Name="Available Beds" Type="int" />
+          <Property Name="Min Age" Type="int" />
+          <Property Name="Max Age" Type="int" />
           <Property Name="Preferred Gender" Type="nvarchar" MaxLength="20" />
           <Property Name="Agency" Type="nvarchar" MaxLength="20" />
-          <Property Name="POC" Type="nvarchar" MaxLength="20" />
+          <Property Name="POC" Type="nvarchar" MaxLength="50" />
           <Property Name="Comments" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityContainer Name="FosterDataModelStoreContainer">
@@ -53,14 +53,14 @@
           <Property Name="Family_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Foster_Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Type_of_Home" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Licensed_Beds" Type="Int32" Nullable="false" />
-          <Property Name="Occupied_Beds" Type="Int32" Nullable="false" />
-          <Property Name="Available_Beds" Type="Int32" Nullable="false" />
-          <Property Name="Min_Age" Type="Int32" Nullable="false" />
-          <Property Name="Max_Age" Type="Int32" Nullable="false" />
+          <Property Name="Licensed_Beds" Type="Int32" />
+          <Property Name="Occupied_Beds" Type="Int32" />
+          <Property Name="Available_Beds" Type="Int32" />
+          <Property Name="Min_Age" Type="Int32" />
+          <Property Name="Max_Age" Type="Int32" />
           <Property Name="Preferred_Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Agency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="POC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="POC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
