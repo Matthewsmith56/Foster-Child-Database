@@ -19,7 +19,7 @@ namespace FosterSite.Models
         [Required(ErrorMessage = "Family Name is required")]
         public string Foster_Family { get; set; }
 
-        [Required(ErrorMessage = "Home type is required")]
+        //[Required(ErrorMessage = "Home type is required")]
         public string Type_of_Home { get; set; }
 
         [Range(0, 10), Required(ErrorMessage = "Number of licensed beds is required")]
@@ -31,7 +31,10 @@ namespace FosterSite.Models
         [Range(0, 10), Required(ErrorMessage = "Number of available beds is required")]
         public Nullable<int> Available_Beds { get; set; }
 
+        [Range(0, 18)]
         public Nullable<int> Min_Age { get; set; }
+
+        [Range(0, 18)]
         public Nullable<int> Max_Age { get; set; }
         public string Preferred_Gender { get; set; }
 
