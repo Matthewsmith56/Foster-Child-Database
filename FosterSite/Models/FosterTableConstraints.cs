@@ -21,7 +21,7 @@ namespace FosterSite.Models
         [Display(Name = "Foster Family")]
         public string Foster_Family { get; set; }
 
-        [Required(ErrorMessage = "Home type is required")]
+        [Required(ErrorMessage = "Do not leave blank")]
         [Display(Name = "Type of Home")]
         public string Type_of_Home { get; set; }
 
@@ -48,6 +48,7 @@ namespace FosterSite.Models
         [Display(Name = "Max Age")]
         public Nullable<int> Max_Age { get; set; }
 
+        [Required(ErrorMessage = "Do not leave blank")]
         [Display(Name = "Preferred Gender")]
         public string Preferred_Gender { get; set; }
 
