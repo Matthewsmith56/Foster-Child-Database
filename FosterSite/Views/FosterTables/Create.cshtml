@@ -47,7 +47,6 @@
             @Html.LabelFor(model => model.Occupied_Beds, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.Occupied_Beds, new SelectList(new[] {0,1,2,3,4,5,6,7,8,9,10}))
-
                 @*@Html.EditorFor(model => model.Occupied_Beds, new {htmlAttributes = new {@class = "form-control"}})*@
                 @Html.ValidationMessageFor(model => model.Occupied_Beds, "", new {@class = "text-danger"})
             </div>
@@ -58,7 +57,6 @@
             <div class="col-md-10">
                 
                 @Html.DropDownListFor(model => model.Available_Beds, new SelectList(new[] {0,1,2,3,4,5,6,7,8,9,10}))
-
                 @*@Html.EditorFor(model => model.Available_Beds, new {htmlAttributes = new {@class = "form-control"}})*@
                 @Html.ValidationMessageFor(model => model.Available_Beds, "", new {@class = "text-danger"})
             </div>
@@ -67,9 +65,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Min_Age, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                
                 @Html.DropDownListFor(model => model.Min_Age, new SelectList(new[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18}))
-
                 @*@Html.EditorFor(model => model.Min_Age, new {htmlAttributes = new {@class = "form-control"}})*@
                 @Html.ValidationMessageFor(model => model.Min_Age, "", new {@class = "text-danger"})
             </div>
@@ -78,9 +74,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Max_Age, htmlAttributes: new {@class = "control-label col-md-2"})
             <div class="col-md-10">
-                
                 @Html.DropDownListFor(model => model.Max_Age, new SelectList(new[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18}))
-
                 @*@Html.EditorFor(model => model.Max_Age, new {htmlAttributes = new {@class = "form-control"}})*@
                 @Html.ValidationMessageFor(model => model.Max_Age, "", new {@class = "text-danger"})
             </div>
@@ -90,8 +84,7 @@
             @Html.LabelFor(model => model.Preferred_Gender, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.Preferred_Gender, new SelectList(new[] { "             ", "Male", "Female", "No Preferance" }))
-
-                @*@Html.EditorFor(model => model.Preferred_Gender, new {htmlAttributes = new {@class = "form-control"}})*@  @*  Adds text box for input  *@
+                @*@Html.EditorFor(model => model.Preferred_Gender, new {htmlAttributes = new {@class = "form-control"}})*@
                 @Html.ValidationMessageFor(model => model.Preferred_Gender, "", new { @class = "text-danger" })
             </div>
         </div>
