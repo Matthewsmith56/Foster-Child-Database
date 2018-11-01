@@ -21,16 +21,16 @@ namespace FosterSite.Models
         [Display(Name = "Foster Family")]
         public string Foster_Family { get; set; }
 
-        //[Required(ErrorMessage = "Home type is required")]
+        [Required(ErrorMessage = "Home type is required")]
         [Display(Name = "Type of Home")]
         public string Type_of_Home { get; set; }
 
         [Range(0, 10)]
         [Required(ErrorMessage = "Number of licensed beds is required")]
-        [Display (Name = "Licensed Beds")]
+        [Display(Name = "Licensed Beds")]
         public Nullable<int> Licensed_Beds { get; set; }
 
-        [Range (0, 10)]
+        [Range(0, 10)]
         [Display(Name = "Occupied Beds")]
         [Required(ErrorMessage = "Number of occupied beds is required")]
         public Nullable<int> Occupied_Beds { get; set; }
