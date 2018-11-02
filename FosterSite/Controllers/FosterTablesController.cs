@@ -15,12 +15,20 @@ namespace FosterSite.Controllers
         private FosterDataEntities db = new FosterDataEntities();
 
         // GET: FosterTables
-        public ActionResult Index(string sortOrder)
+        public ViewResult Index(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
             var Data = from s in db.FosterTables
                 select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                Data = Data.Where(s => s.Foster_Family.Contains(searchString));
+                //|| s.POC.Contains(searchString)
+                //|| s.Agency.Contains(searchString));
+            }
+
             switch (sortOrder)
             {
                 case "name_desc":

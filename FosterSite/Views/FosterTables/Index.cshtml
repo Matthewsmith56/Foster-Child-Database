@@ -7,10 +7,19 @@
 <h2>Foster Index</h2>
 
 <p>
-    <p><a href="http://localhost:55155/FosterTables/Create" class="btn btn-primary btn-lg">Add New</a></p>
+<p><a href="http://localhost:55155/FosterTables/Create" class="btn btn-primary btn-lg">Add New</a></p>
 
-    @*<h3>@Html.ActionLink("Create New", "Create")</h3>*@  @*  Old Link, keep in event of error  *@
+@*<h3>@Html.ActionLink("Create New", "Create")</h3>*@  @*  Old Link, keep in event of error  *@
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+         Find: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>
@@ -100,9 +109,9 @@
                 @Html.DisplayFor(modelItem => item.Comments)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {id = item.Family_ID}) |
-                @Html.ActionLink("Details", "Details", new {id = item.Family_ID}) |
-                @Html.ActionLink("Delete", "Delete", new {id = item.Family_ID})
+                @Html.ActionLink("Edit", "Edit", new { id = item.Family_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Family_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Family_ID })
             </td>
         </tr>
     }
