@@ -14,31 +14,45 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Foster_Family)
+            @*@Html.DisplayNameFor(model => model.Foster_Family)*@
+            @Html.ActionLink("Foster Family", "Index", new { sortOrder = ViewBag.NameSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Type_of_Home)
+            @*@Html.DisplayNameFor(model => model.Type_of_Home)*@
+            @Html.ActionLink("Type of Home", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Licensed_Beds)
+            @*@Html.DisplayNameFor(model => model.Licensed_Beds)*@
+            @Html.ActionLink("Licensed Beds", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Occupied_Beds)
+            @*@Html.DisplayNameFor(model => model.Occupied_Beds)*@
+            @Html.ActionLink("Occupied Beds", "Index", new { sortOrder = ViewBag.DateSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Available_Beds)
+            @*@Html.DisplayNameFor(model => model.Available_Beds)*@
+            @Html.ActionLink("Available Beds", "Index", new { sortOrder = ViewBag.DateSortParm })
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Min_Age)
+            @*@Html.DisplayNameFor(model => model.Min_Age)*@
+            @Html.ActionLink("Min Age", "Index", new { sortOrder = ViewBag.DateSortParm })
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Max_Age)
+            @*@Html.DisplayNameFor(model => model.Max_Age)*@
+            @Html.ActionLink("Max Age", "Index", new { sortOrder = ViewBag.DateSortParm })
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Preferred_Gender)
+            @*@Html.DisplayNameFor(model => model.Preferred_Gender)*@
+            @Html.ActionLink("Preferred Gender", "Index", new { sortOrder = ViewBag.DateSortParm })
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Agency)
+            @*@Html.DisplayNameFor(model => model.Agency)*@
+            @Html.ActionLink("Agency", "Index", new { sortOrder = ViewBag.DateSortParm })
+
         </th>
         <th>
             @Html.DisplayNameFor(model => model.POC)
@@ -49,47 +63,48 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Foster_Family)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type_of_Home)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Licensed_Beds)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occupied_Beds)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Available_Beds)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Min_Age)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Max_Age)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Preferred_Gender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Agency)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.POC)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comments)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Family_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Family_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Family_ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foster_Family)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type_of_Home)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Licensed_Beds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Occupied_Beds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Available_Beds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Min_Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Max_Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preferred_Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.POC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.Family_ID}) |
+                @Html.ActionLink("Details", "Details", new {id = item.Family_ID}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.Family_ID})
+            </td>
+        </tr>
+    }
 
 </table>

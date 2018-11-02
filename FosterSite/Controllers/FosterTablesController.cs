@@ -15,10 +15,33 @@ namespace FosterSite.Controllers
         private FosterDataEntities db = new FosterDataEntities();
 
         // GET: FosterTables
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.FosterTables.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var Data = from s in db.FosterTables
+                select s;
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    Data = Data.OrderByDescending(s => s.Foster_Family);
+                    break;
+                case "Date":
+                    Data = Data.OrderBy(s => s.Type_of_Home);
+                    break;
+                case "date_desc":
+                    Data = Data.OrderByDescending(s => s.Type_of_Home);
+                    break;
+                default:
+                    Data = Data.OrderBy(s => s.Foster_Family);
+                    break;
+            }
+            return View(Data.ToList());
         }
+        //public ActionResult Index()
+        //{
+        //    return View(db.FosterTables.ToList());
+        //}
 
         // GET: FosterTables/Details/5
         public ActionResult Details(int? id)
