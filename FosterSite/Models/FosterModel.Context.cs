@@ -15,6 +15,8 @@ namespace FosterSite.Models
     
     public partial class FosterDataEntities : DbContext
     {
+        internal object Students;
+
         public FosterDataEntities()
             : base("name=FosterDataEntities")
         {

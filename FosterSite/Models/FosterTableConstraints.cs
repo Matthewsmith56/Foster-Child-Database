@@ -19,6 +19,7 @@ namespace FosterSite.Models
 
         [Required(ErrorMessage = "Family Name is required")]
         [Display(Name = "Foster Family")]
+        [MaxLength(20, ErrorMessage = "Maximum of 20 characters")]
         public string Foster_Family { get; set; }
 
         [Required(ErrorMessage = "Do not leave blank")]
@@ -54,10 +55,12 @@ namespace FosterSite.Models
 
         [Display(Name = "Agency")]
         [Required(ErrorMessage = "Agency is required")]
+        [MaxLength(20, ErrorMessage = "Maximum of 20 characters")]
         public string Agency { get; set; }
 
         [Display(Name = "Point of Contact")]
         [Required(ErrorMessage = "A point of contact is required")]
+        [MaxLength(45, ErrorMessage = "Maximum of 30 characters")]
         public string POC { get; set; }
 
         public string Comments { get; set; }
