@@ -8,4 +8,4 @@
 
 4. create password and login page
 
-5. Add Search bar
+// 5. Add Search bar
