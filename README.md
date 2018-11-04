@@ -15,3 +15,9 @@ Basic Requirements
 4.	master database regularly, either through a user-initiated refresh or through regularly scheduled updates with the master database. 
 
 5.	Each Sub database should be independent of other sub databases and should not be accessible by other organizations.
+
+References I used for this project:
+
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started
+
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
