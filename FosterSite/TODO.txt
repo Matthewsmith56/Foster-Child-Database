@@ -4,8 +4,10 @@
 
 // 2. Insert a way to que data, (Drop down filter) 
 
-3. find a way to have the view table extend to the right 
+// 3. find a way to have the view table extend to the right 
 
 4. create password and login page
 
 // 5. Add Search bar
+
+6. interface from phone

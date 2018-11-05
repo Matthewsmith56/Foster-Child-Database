@@ -24,9 +24,8 @@ namespace FosterSite.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                Data = Data.Where(s => s.Foster_Family.Contains(searchString));
-                //|| s.POC.Contains(searchString)
-                //|| s.Agency.Contains(searchString));
+                Data = Data.Where(s => s.Foster_Family.Contains(searchString) 
+                       || s.Agency.Contains(searchString) || s.POC.Contains(searchString) || s.Comments.Contains(searchString));
             }
 
             switch (sortOrder)
