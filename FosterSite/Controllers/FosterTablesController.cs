@@ -153,5 +153,10 @@ namespace FosterSite.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult FosterIndex()
+        {
+            return View(db.FosterTables.ToList());
+        }
     }
 }

@@ -11,3 +11,5 @@
 // 5. Add Search bar
 
 6. interface from phone
+
+7. Highlight words that match search
