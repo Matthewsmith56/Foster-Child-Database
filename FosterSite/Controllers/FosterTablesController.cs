@@ -17,7 +17,12 @@ namespace FosterSite.Controllers
         // GET: FosterTables
         public ViewResult Index(string sortOrder, string searchString)
         {
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.FamilySortParm = "Foster_Family_desc";
+            ViewBag.TypeSortParm = "Type_of_Home_desc";
+            ViewBag.GenderSortParm = "Preferred_Gender_desc";
+            ViewBag.AgencySortParm = "Agency_desc";
+
+            ViewBag.SortParm       = String.IsNullOrEmpty(sortOrder) ? "Type_of_Home_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
             var Data = from s in db.FosterTables
                 select s;
@@ -30,17 +35,38 @@ namespace FosterSite.Controllers
 
             switch (sortOrder)
             {
-                case "name_desc":
+
+                case "Foster_Family_desc":
+                    ViewBag.FamilySortParm = "Foster_Family_asc";
                     Data = Data.OrderByDescending(s => s.Foster_Family);
                     break;
-                case "Date":
-                    Data = Data.OrderBy(s => s.Type_of_Home);
+                case "Foster_Family_asc":
+                    ViewBag.FamilySortParm = "Foster_Family_desc";
+                    Data = Data.OrderBy(s => s.Foster_Family);
                     break;
-                case "date_desc":
+                case "Type_of_Home_desc":
+                    ViewBag.TypeSortParm = "Type_of_Home_asc";
                     Data = Data.OrderByDescending(s => s.Type_of_Home);
                     break;
-                default:
-                    Data = Data.OrderBy(s => s.Foster_Family);
+                case "Type_of_Home_asc":
+                    ViewBag.TypeSortParm = "Type_of_Home_desc";
+                    Data = Data.OrderBy(s => s.Type_of_Home);
+                    break;
+                case "Preferred_Gender_desc":
+                    ViewBag.GenderSortParm = "Preferred_Gender_asc";
+                    Data = Data.OrderByDescending(s => s.Preferred_Gender);
+                    break;
+                case "Preferred_Gender_asc":
+                    ViewBag.GenderSortParm = "Preferred_Gender_desc";
+                    Data = Data.OrderBy(s => s.Preferred_Gender);
+                    break;
+                case "Agency_desc":
+                    ViewBag.AgencySortParm = "Agency_asc";
+                    Data = Data.OrderByDescending(s => s.Agency);
+                    break;
+                case "Agency_asc":
+                    ViewBag.AgencySortParm = "Agency_desc";
+                    Data = Data.OrderBy(s => s.Agency);
                     break;
             }
             return View(Data.ToList());

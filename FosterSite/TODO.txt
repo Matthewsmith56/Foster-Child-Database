@@ -13,3 +13,7 @@
 6. interface from phone
 
 7. Highlight words that match search
+
+8. Create Tests
+
+9. Seed data

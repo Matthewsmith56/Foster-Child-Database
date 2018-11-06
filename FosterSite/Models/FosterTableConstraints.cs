@@ -22,7 +22,7 @@ namespace FosterSite.Models
         [MaxLength(20, ErrorMessage = "Maximum of 20 characters")]
         public string Foster_Family { get; set; }
 
-        [Required(ErrorMessage = "Do not leave blank")]
+        [Required(ErrorMessage = "Type of Home is required")]
         [Display(Name = "Type of Home")]
         public string Type_of_Home { get; set; }
 
@@ -49,7 +49,7 @@ namespace FosterSite.Models
         [Display(Name = "Max Age")]
         public Nullable<int> Max_Age { get; set; }
 
-        [Required(ErrorMessage = "Do not leave blank")]
+        [Required(ErrorMessage = "Preferred Gender is required")]
         [Display(Name = "Preferred Gender")]
         public string Preferred_Gender { get; set; }
 
