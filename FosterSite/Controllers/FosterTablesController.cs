@@ -21,6 +21,7 @@ namespace FosterSite.Controllers
             ViewBag.TypeSortParm = "Type_of_Home_desc";
             ViewBag.GenderSortParm = "Preferred_Gender_desc";
             ViewBag.AgencySortParm = "Agency_desc";
+            ViewBag.NumberSortParm = "Licensed_Beds_desc";
 
             ViewBag.SortParm       = String.IsNullOrEmpty(sortOrder) ? "Type_of_Home_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
@@ -35,7 +36,6 @@ namespace FosterSite.Controllers
 
             switch (sortOrder)
             {
-
                 case "Foster_Family_desc":
                     ViewBag.FamilySortParm = "Foster_Family_asc";
                     Data = Data.OrderByDescending(s => s.Foster_Family);
@@ -67,6 +67,14 @@ namespace FosterSite.Controllers
                 case "Agency_asc":
                     ViewBag.AgencySortParm = "Agency_desc";
                     Data = Data.OrderBy(s => s.Agency);
+                    break;
+                case "Licensed_Beds_desc":
+                    ViewBag.NumberSortParm = "Licensed_Beds_asc";
+                    Data = Data.OrderByDescending(s => s.Licensed_Beds);
+                    break;
+                case "Licensed_Beds_asc":
+                    ViewBag.NumberSortParm = "Licensed_Beds_desc";
+                    Data = Data.OrderBy(s => s.Licensed_Beds);
                     break;
             }
             return View(Data.ToList());
